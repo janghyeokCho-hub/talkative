@@ -1,0 +1,49 @@
+{
+  "name": "talkative",
+  "version": "0.0.1",
+  "main": "dist-electron/main/index.js",
+  "description": "talkative",
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "preview": "vite preview",
+    "pree2e": "vite build --mode=test",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.29.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.0.1",
+    "electron": "^22.0.3",
+    "electron-builder": "^23.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-electron-plugin": "^0.7.4",
+    "vite-plugin-electron-renderer": "^0.12.1"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.2",
+    "@types/react-helmet": "6.1.6",
+    "@types/react-redux": "7.1.25",
+    "@types/redux-actions": "2.6.2",
+    "@types/redux-logger": "3.0.9",
+    "immer": "9.0.19",
+    "react-redux": "8.0.5",
+    "react-router-dom": "6.8.1",
+    "redux-actions": "3.0.0",
+    "redux-logger": "3.0.6",
+    "redux-saga": "1.2.2"
+  }
+}
