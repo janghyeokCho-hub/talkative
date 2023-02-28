@@ -4,8 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import { Main } from "@/route/main/index.async";
 import { popLayer } from "@/modules/mainlayer";
 
-const TITLE = APP_VERSION;
-
 class App extends Component {
   constructor(props: any) {
     super(props);
@@ -18,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <title>Talkative - v{TITLE}</title>
+        <title>Talkative - v{APP_VERSION}</title>
         {(navigator.onLine && (
           <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
             <div
