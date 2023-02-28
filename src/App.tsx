@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import { Main } from "@/route/main/index.async";
 import { popLayer } from "@/modules/mainlayer";
+import SocketContainer from "./containers/socket/SocketContainer";
 
 class App extends Component {
   constructor(props: any) {
@@ -28,9 +29,10 @@ class App extends Component {
             >
               <Suspense fallback={<div>Loading....</div>}>
                 <Routes>
-                  <Route path="/client" element={<Main />} />
+                  <Route path="/" element={<Main />} />
                 </Routes>
               </Suspense>
+              <SocketContainer />
             </div>
           </div>
         )) || <></>}

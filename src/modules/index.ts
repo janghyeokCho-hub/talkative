@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
-import mainlayer from "@/modules/mainlayer";
 import { all } from "redux-saga/effects";
+import mainlayer from "@/modules/mainlayer";
+import socket from "@/modules/socket";
 
 const rootReducer = combineReducers({
   mainlayer,
+  socket,
 });
 
 export function* rootSaga() {
@@ -13,3 +15,5 @@ export function* rootSaga() {
 }
 
 export default rootReducer;
+
+export type RootStateType = ReturnType<typeof rootReducer>;

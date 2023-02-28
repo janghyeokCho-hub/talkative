@@ -15,6 +15,7 @@ export default defineConfig(({ command }) => {
   // 전역으로 사용할 변수
   const globals = {
     APP_VERSION: `"${pkg.version}"`,
+    CONN_SOCKET: null,
   };
 
   return {
